@@ -5,7 +5,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -852,6 +858,63 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="south"/>
     </comp>
   </circuit>
+  <circuit name="NOT A">
+    <a name="circuit" val="NOT A"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="40" stroke="#000000" stroke-width="2" width="90" x="50" y="50"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="91" y="74">NOT A</text>
+      <circ-port height="8" pin="280,170" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="180,210" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="520,210" width="10" x="135" y="65"/>
+      <circ-anchor facing="east" height="6" width="6" x="107" y="77"/>
+    </appear>
+    <wire from="(490,210)" to="(520,210)"/>
+    <wire from="(300,170)" to="(330,170)"/>
+    <wire from="(370,170)" to="(400,170)"/>
+    <wire from="(280,170)" to="(300,170)"/>
+    <wire from="(300,140)" to="(350,140)"/>
+    <wire from="(400,160)" to="(400,170)"/>
+    <wire from="(390,200)" to="(390,210)"/>
+    <wire from="(350,140)" to="(350,150)"/>
+    <wire from="(390,200)" to="(400,200)"/>
+    <wire from="(280,210)" to="(390,210)"/>
+    <wire from="(180,210)" to="(250,210)"/>
+    <wire from="(490,180)" to="(490,210)"/>
+    <wire from="(300,140)" to="(300,170)"/>
+    <wire from="(450,180)" to="(490,180)"/>
+    <comp lib="0" loc="(520,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(450,180)" name="AND Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(221,138)" name="Text">
+      <a name="text" val="NOT a 8 BIT"/>
+    </comp>
+    <comp lib="0" loc="(180,210)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(280,170)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(280,210)" name="NOT Gate">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(370,170)" name="Bit Extender">
+      <a name="in_width" val="1"/>
+      <a name="out_width" val="8"/>
+      <a name="type" val="input"/>
+    </comp>
+  </circuit>
   <circuit name="MUX da 2 a 1">
     <a name="circuit" val="MUX da 2 a 1"/>
     <a name="clabel" val=""/>
@@ -907,47 +970,53 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
     </comp>
   </circuit>
-  <circuit name="NOT A">
-    <a name="circuit" val="NOT A"/>
+  <circuit name="NOT B">
+    <a name="circuit" val="NOT B"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="40" stroke="#000000" stroke-width="2" width="80" x="50" y="50"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="87" y="72">NOT B</text>
+      <circ-port height="8" pin="280,170" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="180,210" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="520,210" width="10" x="125" y="65"/>
+      <circ-anchor facing="east" height="6" width="6" x="107" y="77"/>
+    </appear>
+    <wire from="(490,190)" to="(490,210)"/>
     <wire from="(490,210)" to="(520,210)"/>
+    <wire from="(460,190)" to="(490,190)"/>
     <wire from="(300,170)" to="(330,170)"/>
-    <wire from="(370,170)" to="(400,170)"/>
     <wire from="(280,170)" to="(300,170)"/>
-    <wire from="(300,140)" to="(350,140)"/>
-    <wire from="(400,160)" to="(400,170)"/>
-    <wire from="(390,200)" to="(390,210)"/>
-    <wire from="(350,140)" to="(350,150)"/>
-    <wire from="(390,200)" to="(400,200)"/>
-    <wire from="(280,210)" to="(390,210)"/>
     <wire from="(180,210)" to="(250,210)"/>
-    <wire from="(490,180)" to="(490,210)"/>
+    <wire from="(300,140)" to="(350,140)"/>
     <wire from="(300,140)" to="(300,170)"/>
-    <wire from="(450,180)" to="(490,180)"/>
+    <wire from="(280,210)" to="(410,210)"/>
+    <wire from="(370,170)" to="(410,170)"/>
+    <wire from="(350,140)" to="(350,150)"/>
+    <comp lib="0" loc="(280,170)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(460,190)" name="AND Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(200,126)" name="Text">
+      <a name="text" val="NOT a 8 BIT"/>
+    </comp>
     <comp lib="0" loc="(520,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(450,180)" name="AND Gate">
+    <comp lib="1" loc="(280,210)" name="NOT Gate">
       <a name="width" val="8"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(221,138)" name="Text">
-      <a name="text" val="NOT a 8 BIT"/>
     </comp>
     <comp lib="0" loc="(180,210)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(280,170)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(280,210)" name="NOT Gate">
-      <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(370,170)" name="Bit Extender">
       <a name="in_width" val="1"/>
